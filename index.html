@@ -15,8 +15,14 @@
   <!-- STYLING -->
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- FONT-AWESOME SCRIPT -->
+  <script src="https://kit.fontawesome.com/b169b11cfd.js"></script>
+
   <!-- INCLUDE JQUERY LOCALLY -->
   <script src="vendor/jquery/jquery.js"></script>
+
+  <!-- LOAD YOU DATA -->
+  <script src="scripts/data.js"></script>
 
   <!-- INCLUDE LOCAL SCRIPT FILE -->
   <script src="scripts/index.js"></script>
@@ -24,20 +30,52 @@
 </head>
 
 <body>
+
   <nav class="navbar">
     <div class="navbar-center flex-center">
-      <div class="my-logo">
-        <div class="box-logo flex-center">
-          <h1>JP</h1>
+        <!-- NAVBAR FOR HAMBURGER MENU -->
+      <nav class="Menubar">
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
         </div>
-      </div>
-      <span class="north-east-region">North-East</span>
+        <div class="Navbar-link-container flex">
+          <div class="Navbar-links">
+            <a href="#">North-East</a>
+            <a href="#">Mid-West</a>
+            <a href="#">South</a>
+            <a href="#">West</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Code for menu end here -->
+      <a class="black-border-bottom" href="">
+        <span class="north-east-region">North-East</span>
+      </a>
+      <a class="black-border-bottom" href="">
+        <span class="mid-west-region">Mid-West</span>
+      </a>
+      <a class="black-border-bottom" href="">
+        <span class="south-region">South</span>
+      </a>
+      <a class="black-border-bottom" href="">
+        <span class="west-region">West</span>
+      </a>
+      <a class="black-border-bottom" href="gallery.html" target="_blank">
+        <span class="gallery-page">Gallery</span>
+      </a>
+
+      <!-- <span class="north-east-region">North-East</span>
       <span class="mid-west-region">Mid-West</span>
       <span class="south-region">South</span>
-      <span class="west-region">West</span>
-      <span>
-        <img src="images/icons/baseline-search-24px.svg" alt="Search Icon">
-      </span>
+      <span class="west-region">West</span> -->
+      <div class="search-box">
+        <input id = "tags" class="search-txt flex-end" type="text" name="" placeholder="Search states in United States">
+            <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+          <div class="dialog">
+          </div>
+      <!-- <img src="images/icons/icon-search.png" alt="Search-icon"> -->
     </div>
   </nav>
 
@@ -45,23 +83,26 @@
 
 <div class="main-page-4-tile flex-center flex-wrap">
   <a href="north-east.html" target="_blank">
-    <div class="tile-1">
-      <p>Northeast</p>
+    <div class="tile-1 flex-center">
+      <img class="image" src="images/northeast/north-east.PNG" alt="North-east-region">
+      <div class="middle">
+        <div class="text">North-East</div>
+      </div>
     </div>
   </a>
   <a href="mid-west.html" target="_blank">
-    <div class="tile-2">
-      <p>Midwest</p>
+    <div class="tile-2 flex-center">
+      <img src="images/midwest/mid-west.PNG" alt="Mid-west-region">
     </div>
   </a>
   <a href="south.html" target="_blank">
-    <div class="tile-3">
-      <p>South</p>
+    <div class="tile-3 flex-center">
+      <img src="images/south/south.PNG" alt="South-region">
     </div>
   </a>
   <a href="west.html" target="_blank">
-    <div class="tile-4">
-      <p>West</p>
+    <div class="tile-4 flex-center">
+      <img src="images/west/west.PNG" alt="West-region">
     </div>
   </a>
 </div>
