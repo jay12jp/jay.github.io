@@ -14,37 +14,17 @@ img {
   width: 100%;
 }
 
-/* MOBILE */
-
-@media only screen and (max-width: 600px) {
-  /* Code goes in here */
-  .Menubar {
-    flex-direction: column;
-  }
-  .Menubar i {
-    padding: 20px 0px;
-    margin: 0 auto;
-    line-height: 50px;
-  }
-  .Menubar a{
-    text-align: center;
-  }
-  .mobile-menu {
-    display: flex;
-   }
-  .Navbar-link-container {
-    display: none;
-   }
-  .Navbar-links {
-    display: flex;
-    flex-direction: column
-   }
+h1,h4 {
+  font-family: 'Noto Serif', serif;
+  font-size: 30px;
+  padding: 20px 0;
+  color: white;
+  background-color: #2d3436;
+  width: 100%;
+  text-align: center;
 }
 
-h1 {
-  font-family: 'Dancing Script', cursive;
-}
-
+/* FLEX */
 .flex-center {
   display: flex;
   justify-content: center;
@@ -60,37 +40,52 @@ h1 {
   justify-content: flex-end;
 }
 
-/* STYLING FOR MAIN PAGE */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 
+/* STYLING FOR MAIN PAGE NAVBAR TO BE FIXED ON EVERY PAGE */
+.Navbar {
+ position: fixed;
+ width: 100%;
+ z-index: 1000;
+}
+
+/* STYLING FOR TOP NAVBAR  */
 .navbar-center {
   background: rgba(45,45,45,0.98);
   color: #FFFFFF;
   padding: 2px 10px;
   font-size: 20px;
 }
-.navbar-center .black-border-bottom {
+.navbar-center button  {
+  border: none;
+  background: rgba(45,45,45,0.98);
   margin: 15px;
-  padding-left: 50px;
-  text-decoration: none;
+  font-size: 25px;
   color: #FFFFFF;
+  border-top: 0px;
+  border-left: 0;
+  border-right: 0;
   border-bottom: 2px solid transparent;
+  cursor: pointer;
 }
-.navbar-center span:hover {
+.navbar-center button:hover {
   border-bottom: 2px solid #FFFFFF;
-
 }
 
-/* STYLING FOR SEARCH_BOX IN MAIN PAGE */
+/* STYLING FOR SEARCH BOX IN MAIN PAGE */
 
 .search-box {
   padding-left: 100px;
-  line-height: 50px;
+  line-height: 65px;
 }
 
 .search-box:hover  > .search-txt {
   background: rgba(45,45,45,0.98);
-  width: 250px;
-  padding: 0 6px;
+  width: 240px;
+  padding: 5px 2px;
   border-radius: 50px;
 }
 
@@ -99,106 +94,100 @@ h1 {
   background: none;
   outline: none;
   float: left;
-  line-height: 48px;
+  line-height: 40px;
   font-size: 16px;
   transition: 0.4s;
   width: 0px;
 }
 
-.search-btn {
-  transition: 0.1s;
-}
-.fa-search {
-  color: #FFFFFF;
+/* STYLING FOR SEARCH BOX DROPDOWN */
+
+.states-dropdown {
+  overflow: scroll;
+  height: 0px;
+  width: 300px;
+  position: absolute;
+  background-color: rgba(45,45,45,0.98);
+  cursor: pointer;
 }
 
-/* .search-box {
-  color: rgba(45,45,45,0.98);
+/* STYLING FOR MAIN PAGE HEADING */
+
+.main-page-title {
+  padding: 80px;
+  font-size: 36px;
+  /* background-color: blue; */
 }
 
-.search-box:hover > .search-txt {
-  width: 240px;
-  padding: 0 6px;
+/* STYLING FOR MAIN PAGE TILE */
+.main-page-4-tile img {
+  width: 500px;
+  height: 294px;
+  padding: 10px 30px;
 }
 
-.search-btn {
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.fas.fa-envelope-square::before,.fa-twitter-square:before {
+  text-decoration: none;
+  color : #17202A;
+  font-size: 50px;
+  padding: 0px 10px;
 }
 
-.fa-search {
-  background-color: #2d3436;
-  color: white;
-  padding-bottom: 20px;
-}
-
-.search-txt {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: white;
-  font-size: 16px;
-  transition: 0.4s;
-  width: 0px;
-} */
-
-.main-page-4-tile {
-  margin-top: 100px;
-}
-
-.tile-1 img {
-  width: 490px;
-  padding: 10px 10px;
-  height: 400px;
-  padding: 10px 10px;
-}
-
-.tile-2 img {
-  width: 490px;
-  padding: 10px 10px;
-  height: 400px;
-  padding: 10px 10px;
-}
-
-.tile-3 img {
-  width: 490px;
-  padding: 10px 10px;
-  height: 400px;
-  padding: 10px 10px;
-}
-
-.tile-4 img {
-  width: 490px;
-  padding: 10px 10px;
-  height: 400px;
-  padding: 10px 10px;
-}
-
-.box-logo {
-  width: 20px;
-  height: 20px;
-  border: 20px solid black;
-  border-radius: 50%;
-}
-.box-logo h1{
-  text-align: center;
-}
-/* STYLING FOR NORTH-EAST PAGE */
+/* STYLING FOR NORTH-EAST PAGE,MID-WEST PAGE,SOUTH PAGE,WEST PAGE */
 
 .states-box img {
   width: 300px;
   height: 300px;
   padding: 10px 10px 10px 10px;
+  cursor: pointer;
 }
+
 .states-box h2 {
   text-align: center;
+  font-size: 20px;
+}
+
+.states-box h2:hover {
+  cursor: pointer;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal-content.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  width: 700px;
+  height: 200px;
+  background-color: #fff;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  font-size: 30px;
+  right: 0;
+  top: 0;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
 
 /* STYLING FOR GALLERY PAGE */
@@ -271,4 +260,67 @@ h1 {
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+}
+
+.Gallery-contact-form form-footer {
+  background-color: blue;
+  padding-bottom: 10px;
+}
+
+.Gallery-copyrights-text h4 {
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  color: #FFFFFF;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* CODING FOR MOBILE AND TABLET SIZES */
+
+/* NAVBAR FOR HAMBURGER MENU */
+.navbar-hamburger-menubar {
+  display: none;
+}
+
+.navbar-hamburger-menubar a {
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+}
+
+/* SLICK STYLING */
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  /* hide desltop nav*/
+  .navbar-desktop-menubar {
+    display: none;
+  }
+
+  .navbar-hamburger-menubar {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-hamburger-menubar i {
+    padding: 20px 0px;
+    margin: 0 auto;
+  }
+  .navbar-hamburger-menubar > .navbar-links {
+    text-align: center;
+  }
+
+  .navbar-mobile-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Navbar-links {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
